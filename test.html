@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SupportAI Widget Test Playground</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top right, #1e1b4b, #0f0926, #020205);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      background: linear-gradient(to right, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .hint {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚡ SupportAI Widget Test Page</h1>
+    <p>This is a live preview page hosting your embeddable AI Assistant widget. Look at the bottom right corner of your screen to open the chat bubble and talk to your assistant!</p>
+    <div class="hint">Widget is running live for Tenant ID: aea98131-a855-4faf-9623-99d652a9a31b</div>
+  </div>
+
+  <!-- SupportAI Chat Widget -->
+  <script
+    src="http://127.0.0.1:5000/widget/widget.js"
+    data-tenant-id="aea98131-a855-4faf-9623-99d652a9a31b"
+    data-api-base="http://127.0.0.1:5000"
+  ></script>
+</body>
+</html>

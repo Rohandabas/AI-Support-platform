@@ -1,0 +1,195 @@
+.conv-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.conv-search {
+  display: flex;
+  gap: 8px;
+}
+
+.conv-status-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.conv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.conv-item:last-child { border-bottom: none; }
+
+.conv-item:hover {
+  background: rgba(99,102,241,0.05);
+}
+
+.conv-item-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.conv-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.conv-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.conv-item-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.conv-item-email {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.conv-item-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.conv-item-preview {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.conv-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.conv-item-msg-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* Conversation Messages */
+.conv-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.conv-message {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+}
+
+.conv-message-user {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  margin-left: 40px;
+}
+
+.conv-message-assistant {
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.15);
+  margin-right: 40px;
+}
+
+.conv-message-agent {
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.15);
+  margin-right: 40px;
+}
+
+.conv-message-role {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.conv-message-content {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.conv-escalation-flag {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #fca5a5;
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.2);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.conv-message-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: right;
+}
+
+/* Re-use from Tickets.css */
+.tickets-pagination {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.pagination-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.pagination-btn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: white;
+}

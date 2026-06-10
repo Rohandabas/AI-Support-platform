@@ -1,0 +1,75 @@
+.stat-card {
+  padding: 20px;
+  cursor: default;
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.stat-card-icon--primary { background: rgba(99, 102, 241, 0.15); }
+.stat-card-icon--success { background: rgba(16, 185, 129, 0.15); }
+.stat-card-icon--warning { background: rgba(245, 158, 11, 0.15); }
+.stat-card-icon--danger { background: rgba(239, 68, 68, 0.15); }
+.stat-card-icon--info { background: rgba(6, 182, 212, 0.15); }
+
+.stat-card--primary { border-top: 2px solid rgba(99, 102, 241, 0.4); }
+.stat-card--success { border-top: 2px solid rgba(16, 185, 129, 0.4); }
+.stat-card--warning { border-top: 2px solid rgba(245, 158, 11, 0.4); }
+.stat-card--danger { border-top: 2px solid rgba(239, 68, 68, 0.4); }
+.stat-card--info { border-top: 2px solid rgba(6, 182, 212, 0.4); }
+
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-card-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.trend-up {
+  color: var(--accent-success);
+}
+
+.trend-down {
+  color: var(--accent-danger);
+}
+
+.trend-arrow {
+  font-size: 10px;
+}
+
+.trend-label {
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 2px;
+}

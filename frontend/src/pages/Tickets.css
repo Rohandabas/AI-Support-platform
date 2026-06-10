@@ -1,0 +1,88 @@
+.ticket-counts {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.ticket-count-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.ticket-count-btn:hover {
+  border-color: var(--border-hover);
+  background: rgba(99,102,241,0.05);
+}
+
+.ticket-count-btn.active {
+  border-color: var(--accent-primary);
+  background: rgba(99,102,241,0.15);
+  color: var(--text-primary);
+}
+
+.ticket-count-label {
+  font-weight: 500;
+}
+
+.ticket-count-num {
+  background: rgba(255,255,255,0.08);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tickets-filters {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tickets-search {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.tickets-pagination {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.pagination-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.pagination-btn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: white;
+}
+
+.pagination-btn:hover:not(.active) {
+  border-color: var(--border-hover);
+}

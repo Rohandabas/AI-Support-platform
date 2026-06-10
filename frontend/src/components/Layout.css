@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout-main {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.layout-content {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    margin-left: 0;
+  }
+}
