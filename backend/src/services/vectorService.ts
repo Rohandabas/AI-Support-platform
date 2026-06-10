@@ -5,9 +5,14 @@ let client: ChromaClient | null = null;
 
 const getClient = (): ChromaClient => {
   if (!client) {
-    client = new ChromaClient({
-      path: `http://${process.env.CHROMA_HOST || 'localhost'}:${process.env.CHROMA_PORT || 8000}`,
-    });
+    const host = process.env.CHROMA_HOST || 'localhost';
+    const port = process.env.CHROMA_PORT || 8000;
+    
+    // Check if the host already includes a protocol (like http:// or https://)
+    const isUrl = host.startsWith('http://') || host.startsWith('https://');
+    const path = isUrl ? host : `http://${host}:${port}`;
+    
+    client = new ChromaClient({ path });
   }
   return client;
 };
