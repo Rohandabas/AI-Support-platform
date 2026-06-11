@@ -1,0 +1,23 @@
+SupportAI — Sample Support Knowledge Base & FAQs
+
+This is a sample document that you can use to test the RAG (Retrieval-Augmented Generation) and knowledge-base query capabilities of the chatbot.
+
+=== 1. SHIPPING AND DELIVERY ===
+- Shipping Cost: We offer free standard shipping on all orders over $50. For orders under $50, standard shipping is a flat fee of $4.99.
+- Delivery Time: Standard shipping takes 3 to 5 business days. Express shipping is available for $14.99 and takes 1 to 2 business days.
+- Tracking: You will receive a tracking link via email as soon as your package is shipped. You can also track your order on our website.
+
+=== 2. RETURNS AND REFUNDS ===
+- Return Window: Customers can return any item within 30 days of purchase. The item must be in its original packaging and unused.
+- Return Fee: Standard returns are free if you use our pre-paid shipping label. 
+- Refund Processing: Once we receive your return, refunds are processed within 5 to 7 business days back to your original payment method.
+
+=== 3. ACCOUNT AND SUBSCRIPTIONS ===
+- Plan Options: We offer three subscription plans:
+  * Starter Plan: $9/month (1 user, basic features)
+  * Pro Plan: $29/month (up to 5 users, advanced analytics)
+  * Enterprise Plan: Custom pricing (unlimited users, dedicated support)
+- Password Reset: To reset your password, click the "Forgot Password" link on the login page and follow the email instructions.
+
+=== 4. ESCALATION RULES ===
+- If you have an urgent issue regarding fraud, billing disputes, or want to contact a human agent directly, please ask the chatbot to "connect me to a representative" or state "I want to file a complaint" and a ticket will be immediately created for you.

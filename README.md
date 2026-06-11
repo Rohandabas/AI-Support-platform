@@ -188,3 +188,30 @@ MongoDB Atlas       ChromaDB (Vector DB)
 | `CHROMA_HOST` | ChromaDB host (default: localhost) |
 | `CHROMA_PORT` | ChromaDB port (default: 8000) |
 | `FRONTEND_URL` | Frontend URL for CORS |
+
+---
+
+## 🚀 Live Demo & Submission Details
+
+* **Live Frontend URL:** [https://ai-support-platform-1-sxpx.onrender.com](https://ai-support-platform-1-sxpx.onrender.com)
+* **Live Backend API:** [https://ai-support-platform-wnxd.onrender.com](https://ai-support-platform-wnxd.onrender.com)
+* **Live Vector Database:** [https://ai-support-chroma.onrender.com](https://ai-support-chroma.onrender.com)
+* **GitHub Repository:** [https://github.com/Rohandabas/AI-Support-platform](https://github.com/Rohandabas/AI-Support-platform)
+* **Sample Knowledge Base Data:** `sample_knowledge_base.txt` (Available at the root of the repository)
+* **Demo Admin Credentials:**
+  * **Email:** `demo@example.com`
+  * **Password:** `Password123!`
+  * **Tenant ID:** `7c97ccb8-3687-47b3-836f-f65cc94fbeaa`
+
+### 🏗️ Application Architecture Diagram
+
+```mermaid
+graph TD
+    Client[Web Page / Embeddable Widget] -->|Script Embed / Socket.io| Backend[Node.js + Express Backend API]
+    Frontend[Vite + React Admin Dashboard] -->|Axios REST Requests| Backend
+    Backend -->|Mongoose ODM| Mongo[(MongoDB Atlas)]
+    Backend -->|Chroma Client| Chroma[(ChromaDB Vector Server)]
+    Backend -->|Google GenAI SDK| Gemini[Google Gemini API]
+    Chroma -->|Text Embedding Models| Gemini
+```
+
