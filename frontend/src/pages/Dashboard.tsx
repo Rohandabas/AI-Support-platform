@@ -213,7 +213,7 @@ const Dashboard: React.FC = () => {
         </div>
         <div className="dashboard-embed-code">
           <code>
-            {`<!-- SupportAI Chat Widget -->\n<script\n  src="${import.meta.env.VITE_API_URL || window.location.origin}/widget/widget.js"\n  data-tenant-id="${business?.tenantId || 'YOUR_TENANT_ID'}"\n></script>`}
+            {`<!-- SupportAI Chat Widget -->\n<script\n  src="${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/widget/widget.js"\n  data-tenant-id="${business?.tenantId || 'YOUR_TENANT_ID'}"\n  data-api-base="${import.meta.env.VITE_API_URL || 'http://localhost:5000'}"\n></script>`}
           </code>
         </div>
       </div>

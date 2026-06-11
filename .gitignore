@@ -105,3 +105,6 @@ __pycache__/
 chroma_data/
 backend/uploads/
 dist/
+
+# Scratch & test scripts
+backend/scratch_*

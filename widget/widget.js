@@ -7,7 +7,17 @@
 
   const script = document.currentScript || document.querySelector('script[data-tenant-id]');
   const tenantId = script?.getAttribute('data-tenant-id');
-  const apiBase = script?.getAttribute('data-api-base') || 'http://localhost:5000';
+  
+  // Auto-detect the backend URL from the script source, or default to localhost:5000
+  let defaultApiBase = 'http://localhost:5000';
+  if (script?.src) {
+    try {
+      defaultApiBase = new URL(script.src).origin;
+    } catch (e) {
+      console.warn('[SupportAI] Could not parse script src URL, using fallback:', e);
+    }
+  }
+  const apiBase = script?.getAttribute('data-api-base') || defaultApiBase;
 
   if (!tenantId) {
     console.error('[SupportAI] data-tenant-id is required');
