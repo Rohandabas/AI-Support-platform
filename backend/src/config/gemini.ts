@@ -8,8 +8,8 @@ if (!apiKey) {
 
 export const genAI = new GoogleGenerativeAI(apiKey || 'placeholder');
 
-// Chat model - Gemini 2.5 Flash for fast, intelligent replies
-export const getChatModel = () => genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+// Chat model - Latest stable Gemini Flash for fast, intelligent replies
+export const getChatModel = () => genAI.getGenerativeModel({ model: 'gemini-flash-latest' });
 
 // Embedding model for vector search
 export const getEmbeddingModel = () => genAI.getGenerativeModel({ model: 'gemini-embedding-2' });
