@@ -214,9 +214,13 @@
   const customerForm = document.getElementById('supportai-customer-form');
   const customerSubmit = document.getElementById('sai-customer-submit');
 
-  let customerName = '';
-  let customerEmail = '';
-  let customerInfoCollected = false;
+  const scriptName = script?.getAttribute('data-customer-name') || '';
+  const scriptEmail = script?.getAttribute('data-customer-email') || '';
+  const requireInfo = script?.getAttribute('data-require-info') === 'true';
+
+  let customerName = scriptName;
+  let customerEmail = scriptEmail;
+  let customerInfoCollected = !!(scriptName && scriptEmail) || !requireInfo;
 
   // Load config
   fetch(`${apiBase}/api/widget/config?tenantId=${tenantId}`)
@@ -391,8 +395,6 @@
     }
   });
 
-  // Don't collect customer info if not configured
-  customerInfoCollected = true; // Set to false to enable customer form
-
+  // Don't override customer info collection if configured
   console.log('[SupportAI] Widget initialized for tenant:', tenantId);
 })();
