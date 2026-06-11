@@ -209,7 +209,11 @@ const KnowledgeBase: React.FC = () => {
                       ) : '—'}
                     </td>
                     <td>
-                      <span className={`badge ${status.color}`}>
+                      <span 
+                        className={`badge ${status.color}`}
+                        title={doc.status === 'failed' && doc.errorMessage ? doc.errorMessage : undefined}
+                        style={doc.status === 'failed' && doc.errorMessage ? { cursor: 'help' } : {}}
+                      >
                         {status.icon} {status.label}
                         {doc.status === 'processing' && (
                           <span className="kb-processing-dots">...</span>
