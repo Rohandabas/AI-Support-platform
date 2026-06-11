@@ -199,8 +199,8 @@ MongoDB Atlas       ChromaDB (Vector DB)
 * **GitHub Repository:** [https://github.com/Rohandabas/AI-Support-platform](https://github.com/Rohandabas/AI-Support-platform)
 * **Sample Knowledge Base Data:** `sample_knowledge_base.txt` (Available at the root of the repository)
 * **Demo Admin Credentials:**
-  * **Email:** `demo@example.com`
-  * **Password:** `Password123!`
+  * **Email:** `vinod@gmail.com`
+  * **Password:** `123456`
   * **Tenant ID:** `7c97ccb8-3687-47b3-836f-f65cc94fbeaa`
 
 ### 🏗️ Application Architecture Diagram
