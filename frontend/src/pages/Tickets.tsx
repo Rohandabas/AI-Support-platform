@@ -76,7 +76,7 @@ const Tickets: React.FC = () => {
       {/* Status Counts */}
       <div className="ticket-counts">
         {[
-          { key: '', label: 'All', count: pagination.total, icon: '📋' },
+          { key: '', label: 'All', count: counts.open + counts.inProgress + counts.resolved + counts.closed, icon: '📋' },
           { key: 'open', label: 'Open', count: counts.open, icon: '🔓', color: 'primary' },
           { key: 'in_progress', label: 'In Progress', count: counts.inProgress, icon: '⚙️', color: 'warning' },
           { key: 'resolved', label: 'Resolved', count: counts.resolved, icon: '✅', color: 'success' },

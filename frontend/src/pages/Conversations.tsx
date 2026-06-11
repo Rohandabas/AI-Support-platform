@@ -116,7 +116,7 @@ const Conversations: React.FC = () => {
                 <div className="conv-item-preview">{msgPreview(conv)}...</div>
                 <div className="conv-item-footer">
                   <span className={`badge badge-${conv.status}`}>{conv.status}</span>
-                  {conv.isEscalated && <span className="badge badge-escalated">🚨 Escalated</span>}
+                  {conv.isEscalated && conv.status !== 'escalated' && <span className="badge badge-escalated">🚨 Escalated</span>}
                   {conv.agentJoined && <span className="badge badge-active">👤 Agent Joined</span>}
                   <span className="conv-item-msg-count">
                     {conv.messages?.length || 0} messages

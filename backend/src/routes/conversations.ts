@@ -29,8 +29,7 @@ router.get(
       Conversation.find(filter)
         .sort({ createdAt: -1 })
         .skip(skip)
-        .limit(Number(limit))
-        .select('-messages'),
+        .limit(Number(limit)),
       Conversation.countDocuments(filter),
     ]);
 

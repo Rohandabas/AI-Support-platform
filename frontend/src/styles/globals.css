@@ -266,6 +266,11 @@ select.input-field {
   padding-right: 40px;
 }
 
+select.input-field option {
+  background-color: #141428;
+  color: #f1f5f9;
+}
+
 /* --- Badges / Tags --- */
 .badge {
   display: inline-flex;

@@ -99,8 +99,16 @@ const Escalations: React.FC = () => {
         <div className="glass-card">
           <div className="empty-state">
             <div className="empty-state-icon">✅</div>
-            <h3>No pending escalations</h3>
-            <p>All escalations have been handled. Great work!</p>
+            <h3>
+              {statusFilter === 'pending' ? 'No pending escalations' :
+               statusFilter === 'acknowledged' ? 'No acknowledged escalations' :
+               statusFilter === 'resolved' ? 'No resolved escalations' : 'No escalations found'}
+            </h3>
+            <p>
+              {statusFilter === 'pending' ? 'All escalations have been handled. Great work!' :
+               statusFilter === 'acknowledged' ? "You haven't acknowledged any escalations yet." :
+               statusFilter === 'resolved' ? 'No escalations have been resolved yet.' : 'No escalations match your filter criteria.'}
+            </p>
           </div>
         </div>
       ) : (
