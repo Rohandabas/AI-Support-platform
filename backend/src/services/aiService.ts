@@ -51,7 +51,11 @@ const detectEscalation = (
   const allTriggers = [...ESCALATION_TRIGGERS, ...customRules];
 
   for (const trigger of allTriggers) {
-    if (combinedText.includes(trigger.toLowerCase())) {
+    // Escape special regex characters in the trigger word
+    const escapedTrigger = trigger.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    // Match only full words (word boundaries) to avoid false positives like "pursued" matching "sue"
+    const regex = new RegExp(`\\b${escapedTrigger}\\b`, 'i');
+    if (regex.test(combinedText)) {
       return { flag: true, reason: `Detected: "${trigger}"` };
     }
   }
